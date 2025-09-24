@@ -1,4 +1,13 @@
 import os
+"""
+Configuration module for loading environment variables and secrets.
+- Loads environment variables from a `.env` file located in the project root if it exists else loads from Hugging Face's Secrets Tab.
+- Provides access to the following secrets:
+    - GOOGLE_API_KEY: API key for Gemini LLM.
+    - NVIDIA_API_KEY: API key for NVIDIA LLM.
+    - CHROMA_DIR: Directory path for Chroma DB (defaults to './chroma_db').
+- Prints warnings if required API keys are not set.
+"""
 from dotenv import load_dotenv
 
 #Load .env only if running locally
