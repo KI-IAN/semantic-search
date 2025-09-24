@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  semantic-search-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: semantic-search-app
+    ports:
+      - "1200:7860"
+    volumes:
+      - ./app:/app:rw           # Live code updates via bind mount
+      - ./chroma_db:/app/chroma_db  # Persist Chroma DB
+    environment:
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY}  # Optional: if using .env
+    restart: unless-stopped
+    command: python -m app

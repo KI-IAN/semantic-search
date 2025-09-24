@@ -1,6 +1,8 @@
 gradio
 langchain
+langchain-community
 chromadb
 PyMuPDF
 langchain-google-genai 
 langchain-nvidia-ai-endpoints
+dotenv
