@@ -14,4 +14,4 @@ services:
     environment:
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}  # Optional: if using .env
     restart: unless-stopped
-    command: python -m app
+    command: python /app/app.py
