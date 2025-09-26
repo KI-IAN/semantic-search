@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: semantic-search-app
     ports:
-      - "12000:7860"
+      - "12100:7860"
     environment:
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}  # Load this key from .env in local/dev environment
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}  # Load this key from .env in local/dev environment
