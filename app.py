@@ -202,8 +202,33 @@ def search_query(query):
 
 #Gradio UI
 with gr.Blocks() as demo:
-    gr.Markdown("# 🧠 Semantic Search App (Langchain + ChromaDb + Nvidia NIM API)")
+    gr.HTML("""
+    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+        <h1 style="margin: 0;">📄🔗🧠❓🔗🤖 Semantic Search App</h1>
+        <div style="display: flex; gap: 10px;">
+            <a href="https://github.com/langchain-ai/langchain" target="_blank">
+                <img src="https://img.shields.io/badge/LangChain-Framework-blue?logo=langchain" alt="LangChain">
+            </a>
+            <a href="https://github.com/chroma-core/chroma" target="_blank">
+                <img src="https://img.shields.io/badge/ChromaDB-Vector%20Store-purple?logo=chromadb" alt="ChromaDB">
+            </a>
+            <a href="https://build.nvidia.com/models" target="_blank">
+                <img src="https://img.shields.io/badge/NVIDIA%20NIM-API-green?logo=nvidia" alt="NVIDIA NIM">
+            </a>
+        </div>
+    </div>
+    """)
     
+    gr.HTML("""
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+        <span style="font-size: 16px;">📦 <strong>Download the full source code:</strong></span>
+        <a href="https://github.com/KI-IAN/semantic-search" target="_blank">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-blue?logo=github" alt="GitHub Repo">
+        </a>
+    </div>
+    """)
+
+
     with gr.Row():
         pdf_input = gr.File(label="Upload PDF (max 5mb)", type="binary", file_types=[".pdf"])
         process_btn = gr.Button("Process PDF")
