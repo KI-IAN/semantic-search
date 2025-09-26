@@ -79,7 +79,7 @@ docker-compose up --build
 docker compose up --build
 ```
 
-Access the app at http://localhost:12000
+Access the app at http://localhost:12100
 
 ---
 
@@ -93,7 +93,7 @@ docker compose -f docker-compose.dev.yml up --build
 
 ```
 
-Access the app at http://localhost:12000
+Access the app at http://localhost:12100
 
 
 
