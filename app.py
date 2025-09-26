@@ -202,7 +202,7 @@ def search_query(query):
 
 #Gradio UI
 with gr.Blocks() as demo:
-    gr.Markdown("# 🧠 Semantic Search App (Langchain + ChromaDb + NVidia LLM API)")
+    gr.Markdown("# 🧠 Semantic Search App (Langchain + ChromaDb + Nvidia NIM API)")
     
     with gr.Row():
         pdf_input = gr.File(label="Upload PDF (max 5mb)", type="binary", file_types=[".pdf"])

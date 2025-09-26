@@ -7,11 +7,10 @@ services:
       dockerfile: Dockerfile
     container_name: semantic-search-app
     ports:
-      - "1200:7860"
-    volumes:
-      - ./app:/app:rw           # Live code updates via bind mount
-      - ./chroma_db:/app/chroma_db  # Persist Chroma DB
+      - "12000:7860"
     environment:
-      - NVIDIA_API_KEY=${NVIDIA_API_KEY}  # Optional: if using .env
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY}  # Load this key from .env or manually add the secret
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}  # Load this key from .env or manually add the secret
+      - CHROMA_DIR=${CHROMA_DIR}          # Load this key from .env or manually add the setting
     restart: unless-stopped
-    command: python /app/app.py
+

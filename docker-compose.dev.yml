@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  semantic-search-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: semantic-search-app
+    ports:
+      - "12000:7860"
+    environment:
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY}  # Load this key from .env in local/dev environment
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}  # Load this key from .env in local/dev environment
+      - CHROMA_DIR=${CHROMA_DIR}          # Load this key from .env in local/dev environment
+    volumes:
+      - .:/app:rw           # This is for local development. Docker reads the code from the host machine. Changes on the host are reflected in the container.
+      - ./chroma_db:/app/chroma_db  # Persist Chroma DB. This is for local development. Docker reads the code from the host machine. Changes on the host are reflected in the container.
+    restart: unless-stopped

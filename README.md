@@ -63,7 +63,7 @@ CHROMA_DIR=./chroma_db
 Then run:
 
 ```bash
-python app/app.py
+python app.py
 ```
 
 ---
@@ -71,10 +71,31 @@ python app/app.py
 ### Option 2: Run with Docker
 
 ```bash
-docker-compose up --build
+# To Run in Live environment. It automatically uses the docker-compose.yml
+docker-compose up --build 
+
+# Or If you use the latest docker compose command, use the following
+
+docker compose up --build
 ```
 
-Access the app at http://localhost:1200
+Access the app at http://localhost:12000
+
+---
+
+
+```bash
+# To Run in local environment use docker-compose.dev.yml if you want to reflect your code changes without rebuilding docker container
+docker-compose -f docker-compose.dev.yml up --build
+
+# Or If you use the latest docker compose command, use the following
+docker compose -f docker-compose.dev.yml up --build
+
+```
+
+Access the app at http://localhost:12000
+
+
 
 ---
 
@@ -171,16 +192,18 @@ Add dropdowns to UI for model selection (optional)
 
 ```Code
 semantic-search/
-├── .env
+├── .env 
 ├── .github/
 ├── .gitignore
 ├── docker-compose.yml
+├── docker-compose.dev.yml
 ├── Dockerfile
 ├── requirements.txt
-└── app/
-    ├── app.py
-    └── config.py
+├── app.py
+├── config.py
 ```
+
+> .env file is not tracked in git. Use it only for local development and do not push it to git if you save secrets there.
 
 ---
 
