@@ -13,9 +13,15 @@ pinned: false
 
 Upload a PDF, ask questions, and get context-aware answers powered by LangChain, ChromaDB, and NVIDIA/Google LLMs — all wrapped in a clean Gradio interface.
 
-🔗 **Live Demo**: [https://huggingface.co/spaces/frkhan/semantic-search-app](#)
+🔗 **Live Demo**: [Semantic Search App](https://huggingface.co/spaces/frkhan/semantic-search-app)
 
+### 📖 Read the Full Story
+
+Want to learn more about the journey behind building this project? Check out the full story on Medium:
+
+- [**When the Credits Ran Out, Curiosity Didn’t: A Journey into LLMs, AI Agents & RAG**](https://frkhan.medium.com/when-the-credits-ran-out-curiosity-didnt-a-journey-into-llms-ai-agents-rag-6fcd5299c49a)
 ---
+
 
 ### 🚀 Features
 
@@ -41,12 +47,7 @@ Upload a PDF, ask questions, and get context-aware answers powered by LangChain,
 
 ---
 
-### 📖 Read the Full Story
 
-Want to learn more about the journey behind building this project? Check out the full story on Medium:
-
-- [**When the Credits Ran Out, Curiosity Didn’t: A Journey into LLMs, AI Agents & RAG**](https://frkhan.medium.com/when-the-credits-ran-out-curiosity-didnt-a-journey-into-llms-ai-agents-rag-6fcd5299c49a)
----
 
 ## 📦 Installation
 
@@ -236,3 +237,4 @@ This project is open-source and distributed under the **[MIT License](https://op
 - [PyMuPDF](https://pymupdf.readthedocs.io) — Lightweight PDF parser for fast and accurate text extraction.
 - [Docker](https://www.docker.com) — Containerization platform for reproducible deployment across environments.
 - [Hugging Face Spaces](https://huggingface.co/spaces) — Free hosting platform for ML demos with secret management and GPU support.
+-   [Langfuse](https://langfuse.com/) for providing excellent observability tools.
