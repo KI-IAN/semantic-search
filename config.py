@@ -21,9 +21,16 @@ if os.path.exists(env_path):
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")        
 CHROMA_DIR = os.getenv("CHROMA_DIR", "./chroma_db") 
+LANGFUSE_PUBLIC_KEY = os.getenv("LANGFUSE_PUBLIC_KEY")
+LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY")
+LANGFUSE_HOST = os.getenv("LANGFUSE_HOST", "https://cloud.langfuse.com") # Default to cloud
 
 if not GOOGLE_API_KEY:
     print("⚠️ Warning: GOOGLE_API_KEY is not set. Gemini LLM API may fail.")
     
 if not NVIDIA_API_KEY:
     print("⚠️ Warning: NVIDIA_API_KEY is not set. NVIDIA LLM API may fail.")
+    
+if not LANGFUSE_PUBLIC_KEY or not LANGFUSE_SECRET_KEY:
+    print("⚠️ Warning: LANGFUSE_PUBLIC_KEY or LANGFUSE_SECRET_KEY is not set. Langfuse tracing will be disabled.")
+

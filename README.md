@@ -23,6 +23,7 @@ Upload a PDF, ask questions, and get context-aware answers powered by LangChain,
 - 🔍 Perform semantic search using vector embeddings  
 - 🤖 Get answers from powerful LLMs (NVIDIA or Google Gemini)  
 - 🧠 Uses LangChain + ChromaDB for retrieval  
+- 📈 Integrated with Langfuse for tracing and observability.
 - 🧰 Docker-ready and Hugging Face Spaces–compatible  
 
 ---
@@ -35,8 +36,16 @@ Upload a PDF, ask questions, and get context-aware answers powered by LangChain,
 | ChromaDB         | Vector database for semantic retrieval  |
 | NVIDIA / Gemini  | Embedding + LLM APIs                    |
 | Gradio           | Interactive UI                          |
+| Langfuse         | Tracing and Observability               |
 | Docker           | Containerized deployment                |
 
+---
+
+### 📖 Read the Full Story
+
+Want to learn more about the journey behind building this project? Check out the full story on Medium:
+
+- [**When the Credits Ran Out, Curiosity Didn’t: A Journey into LLMs, AI Agents & RAG**](https://frkhan.medium.com/when-the-credits-ran-out-curiosity-didnt-a-journey-into-llms-ai-agents-rag-6fcd5299c49a)
 ---
 
 ## 📦 Installation
@@ -58,6 +67,9 @@ Create a .env file in the root directory:
 GOOGLE_API_KEY=your_google_api_key
 NVIDIA_API_KEY=your_nvidia_api_key
 CHROMA_DIR=./chroma_db
+LANGFUSE_PUBLIC_KEY=your_langfuse_public_key
+LANGFUSE_SECRET_KEY=your_langfuse_secret_key
+LANGFUSE_HOST=https://cloud.langfuse.com
 ```
 
 Then run:

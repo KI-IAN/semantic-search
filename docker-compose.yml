@@ -12,5 +12,8 @@ services:
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}  # Load this key from .env or manually add the secret
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}  # Load this key from .env or manually add the secret
       - CHROMA_DIR=${CHROMA_DIR}          # Load this key from .env or manually add the setting
+      - LANGFUSE_PUBLIC_KEY=${LANGFUSE_PUBLIC_KEY}  # Load this key from .env in local/dev environment
+      - LANGFUSE_SECRET_KEY=${LANGFUSE_SECRET_KEY}  # Load this key from .env in local/dev environment
+      - LANGFUSE_HOST=${LANGFUSE_HOST}  # Load this key from .env in local/dev environment
     restart: unless-stopped
 
