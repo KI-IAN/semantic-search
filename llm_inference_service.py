@@ -35,7 +35,7 @@ def answer_with_llm(query, retrieved_docs, model_name, model_provider):
     prompt = f""" 
     You are an expert assistant. Use the following context to answer the user's question. 
     If you do not find or know the answer, do not hallucinate, do not try to generate fake answers.
-    If no Context is given, simply state "No relevant information found to answer your question."
+    If no Context is given or you can't find or generate any relevant information to answer the question, simply state "No relevant information found to answer your question."
     
     Context: 
     {context}
